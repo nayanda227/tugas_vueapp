@@ -50,6 +50,19 @@ const currentColorIndex = ref(0)
 const changeColor = () => {
   currentColorIndex.value = (currentColorIndex.value + 1) % colors.length
 }
+// Image Carousel
+const currentImage = ref(0)
+const images = [
+  require('./assets/image1.png'),
+  require('./assets/image2.png'),
+  require('./assets/image3.jpg'),
+]
+const nextImage = () => {
+  currentImage.value = (currentImage.value + 1) % images.length
+}
+const prevImage = () => {
+  currentImage.value = (currentImage.value - 1 + images.length) % images.length
+}
 </script>
 
 <style>
