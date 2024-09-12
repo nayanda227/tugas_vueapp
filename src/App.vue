@@ -21,7 +21,7 @@
         <div :style="boxStyle" @click="changeColor" class="color-box">{{ colors[currentColorIndex] }}</div>
       </div>
     </section>
-    
+
     <section class="image-carousel">
       <h2>Image Carousel</h2>
       <div class="section-box full-carousel">
@@ -36,13 +36,19 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, computed } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+// Click Counter
+const counter = ref(0)
+const incrementCounter = () => {
+  counter.value++
+}
+
+// Box Color Changer
+const colors = ["#FF5733", "#28A745", "#007BFF", "#FFC107", "#6F42C1", "#F7CAC9", "#92A8D1", "#C8102E", "#C0C0C0", "#39FF14", "#7FDBFF", "#FF6F61", "#6D28D9"]
+const currentColorIndex = ref(0)
+const changeColor = () => {
+  currentColorIndex.value = (currentColorIndex.value + 1) % colors.length
 }
 </script>
 
