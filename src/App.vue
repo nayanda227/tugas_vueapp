@@ -1,6 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.png" width="50" height="50" />
+    <h1>Vue App by Nadia</h1>
+  </header>
+
+  <main>
+    <section class="click-counter">
+        <div class="section-box">
+        <h2>Click Counter</h2>
+        <div class="counter-number">{{ counter }}</div> 
+        <button class="primary-btn" @click="incrementCounter">
+        Click to Count 
+      </button>
+      </div>
+    </section>
+    
+  </main>
 </template>
 
 <script>
