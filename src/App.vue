@@ -81,12 +81,135 @@ const prevImage = () => {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  background:  url('./assets/wood_texture.jpeg') no-repeat center center fixed; /* Gambar kayu putih */
+  background-size: cover;
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #010911;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.section-box {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.4); /* Transparansi box */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+}
+.counter-number {
+  font-size: 2.5rem; /* Ukuran angka lebih kecil */
+  font-weight: bold;
+  color: #4371c2; 
+  margin-bottom: 0.5rem; /* Kurangi jarak antara angka dan tombol */
+}
+
+.primary-btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #4371c2;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:hover {
+  background-color: #42838b;
+  transform: translateY(-2px);
+}
+
+.color-box {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+}
+
+.full-carousel {
+  position: relative;
+  padding: 0;
+  background: transparent;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+}
+
+.carousel img:hover {
+  opacity: 0.9;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-nav.left {
+  left: 0;
+}
+
+.carousel-nav.right {
+  right: 0;
 }
 </style>
