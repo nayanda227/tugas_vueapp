@@ -50,6 +50,21 @@ const currentColorIndex = ref(0)
 const changeColor = () => {
   currentColorIndex.value = (currentColorIndex.value + 1) % colors.length
 }
+const boxStyle = computed(() => ({
+  width: '200px',
+  height: '200px',
+  borderRadius: '20px',
+  backgroundColor: `${colors[currentColorIndex.value]}B3`, // Transparansi 70%
+  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#333', // Kontras dengan background
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
+  transition: 'background-color 0.5s ease, transform 0.3s ease',
+  cursor: 'pointer',
+}))
 // Image Carousel
 const currentImage = ref(0)
 const images = [
