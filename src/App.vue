@@ -15,6 +15,13 @@
       </div>
     </section>
     
+    <section class="box-changer">
+      <div class="section-box">
+        <h2>Box Color Changer</h2>
+        <div :style="boxStyle" @click="changeColor" class="color-box">{{ colors[currentColorIndex] }}</div>
+      </div>
+    </section>
+
   </main>
 </template>
 
